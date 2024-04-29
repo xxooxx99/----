@@ -1,0 +1,123 @@
+body, header, main {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #556;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#movies-container div {
+    flex-basis: 20%; /*영화 포스터 이미지 임의로 조절*/
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#movies-container img {
+    width: 60%;
+    height: auto;
+}
+
+#movies-container h3 {
+    margin: 10px;
+}
+
+#movies-container p {
+    padding: 0 10px;
+}
+
+#movies-container span {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+.movie-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33% - 20px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.2);
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.movie-card p {
+    font-size: 0.7rem;
+    color: #666;
+    height: 60px; 
+    overflow: hidden;
+}
+
+.movie-card span {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.movie-card {
+    flex: 0 0 auto; /* 카드의 크기가 변하지 않도록 설정 */
+    width: 200px; /* 카드의 너비를 줄임 */
+    margin: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    min-width: 200px; /* 검색시 카드가 작아지는걸 방지 */
+}
+
+.movie-card img {
+    width: 100%;
+    height: 200px; /* 이미지 높이 설정 */
+    object-fit: cover;
+    border-radius: 5px;
+}
